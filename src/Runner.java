@@ -7,4 +7,12 @@ public class Runner {
         }
         return arr;
     }
+    public static void main(String[] args) {
+        long time = System.nanoTime();
+        SortingUtil.BubbleSort(randIntArr(1000));
+        time = System.nanoTime() - time;
+
+        System.out.println("Time taken: "+ time);
+
+    }
 }
