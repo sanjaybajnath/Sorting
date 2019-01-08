@@ -22,5 +22,24 @@ public class SortingUtil {
         }
     }
 
+    public static void SelectionSort (int[] arr){
+        int curPos = 0;
+        int minPos = 0;
+        int minValue = arr[curPos];
+        while(curPos<arr.length){
+            minPos = curPos;
+            minValue = arr[curPos];
+            for(int i = curPos +1;i<arr.length;i++){
+
+                if(arr[i]<minValue){
+                    minValue = arr[i];
+                    minPos = i;
+                }
+            }
+            swap(arr,minPos,curPos);
+            curPos++;
+        }
+    }
+
 
 }

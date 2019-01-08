@@ -36,5 +36,13 @@ public class Runner {
         System.out.println("Time taken: "+ time);
         System.out.println("isSorted: "+isSorted(array2));
         System.out.println("checkSum: "+checkSum(array1, array2));
+
+
+        int[] arr1 = randIntArr(100);
+        int[] arr2 = arr1;
+        SortingUtil.SelectionSort(arr2);
+        System.out.println("Selection Sort: isSorted = "+isSorted(arr2)+", checkSum = "+checkSum(arr1,arr2));
+
+
     }
 }
