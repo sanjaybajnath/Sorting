@@ -1,4 +1,13 @@
 public class SortingUtil {
+
+    public static int[] copyIntArray (int[] arr){
+        int[] copy = new int[arr.length];
+        for(int i = 0; i< arr.length;i++){
+            copy[i] = arr[i];
+        }
+        return copy;
+
+    }
     public static void swap(int[] arr,int i, int j){
         int t = arr[i];
         arr[i] = arr[j];
@@ -38,6 +47,19 @@ public class SortingUtil {
             }
             swap(arr,minPos,curPos);
             curPos++;
+        }
+    }
+
+    public static void InsertionSort (int[] arr){
+        for(int i = 0;i<arr.length;i++){
+            for(int j = i;j>0;j--){
+                if(arr[j] < arr[j-1]){
+                    swap(arr,j,j-1);
+                }
+                else{
+                    break;
+                }
+            }
         }
     }
 
